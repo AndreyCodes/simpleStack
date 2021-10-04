@@ -9,13 +9,7 @@ private:
 	{
 		value_type data;
 		node* next;
-        node(const value_type& arg)try: data(arg), next(nullptr)
-        {}
-        catch(std::exception& e)
-        {
-            std::cout << e.what();
-
-        }
+        node(const value_type& arg)noexcept: data(arg), next(nullptr){}
         node() noexcept = default;
 	};
 public:
